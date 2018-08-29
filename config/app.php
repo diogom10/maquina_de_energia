@@ -15,6 +15,8 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    //coment
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
