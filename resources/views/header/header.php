@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="maquina_de_energia">
 <head>
 
     <link rel="stylesheet" href="<?= url('/').CSS.'global/global.css'?>">

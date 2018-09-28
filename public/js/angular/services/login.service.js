@@ -1,9 +1,11 @@
-angular.module('maquina_de_energia').controller('loginService', ['$http', function ($http) {
-    var doLogin = function ($param) {
-        $http.post('url', $param)
+angular.module('maquina_de_energia').service('login_service', ['$http', function ($http) {
+    var _doLogin = function (params) {
+
     };
 
     return {
-        doLogin: doLogin
-    }
+        doLogin: _doLogin
+    };
+
 }]);
+

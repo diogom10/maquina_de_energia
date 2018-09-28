@@ -1,7 +1,8 @@
 
+
+
 <script src="<?= url('/').JS_LIB.'angular.min.js'?>" type="text/javascript"></script>
 <script src="<?= url('/').JS_LIB.'jquery-3.3.1.min.js'?>" type="text/javascript"></script>
-
 <?php
 
 if( count($js) > 0 ){
@@ -14,6 +15,8 @@ if( count($js) > 0 ){
     }
 }
 ?>
+
+
 
 
 </body>

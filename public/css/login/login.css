@@ -1,3 +1,44 @@
-
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; }
+  .image-container .wrapper {
+    width: 100%;
+    height: 100%; }
+    .image-container .wrapper .header-login {
+      width: auto;
+      min-height: 80px;
+      background-image: linear-gradient(to top, rgba(255, 0, 0, 0), black);
+      display: flex; }
+      .image-container .wrapper .header-login .title {
+        text-align: center;
+        margin: 0 auto;
+        width: 50%;
+        align-self: center; }
+        .image-container .wrapper .header-login .title .text-title {
+          width: auto;
+          font-size: 3.1em;
+          flex-grow: 49;
+          font-weight: bold;
+          font-family: sans-serif; }
+    .image-container .wrapper .body-login {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 50%;
+      background-color: red;
+      display: flex; }
+      .image-container .wrapper .body-login .container {
+        width: 34%;
+        height: 240px;
+        background-color: yellow; }
 
 /*# sourceMappingURL=login.css.map */
