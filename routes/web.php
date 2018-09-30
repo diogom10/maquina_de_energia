@@ -16,3 +16,4 @@
 //});
 
 Route::get('login','Home@login');
+Route::get('assets','Assets@example');
