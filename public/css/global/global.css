@@ -2,10 +2,21 @@ body {
   font-family: sans-serif; }
   body .form-group {
     position: relative;
-    margin-top: 5%; }
+    margin-top: 0%; }
     body .form-group .form-control-placeholder {
       position: absolute;
-      top: 50%; }
+      top: 30%;
+      font-size: 20px;
+      width: 100%;
+      border-bottom: solid 1px #fff;
+      bottom: 23%;
+      left: 0%;
+      text-align: left; }
+  body input:valid + .form-control-placeholder {
+    position: absolute;
+    top: -30%;
+    transition: all 0.2s;
+    font-size: 15px; }
   body input {
     outline: none;
     height: 60px;
@@ -16,14 +27,15 @@ body {
     outline: 0;
     background-color: transparent;
     border: transparent;
-    border-bottom: solid 0.1em #fff;
     color: #fff;
     font-size: 1.3em; }
     body input:focus + .form-control-placeholder {
       position: absolute;
-      top: -10%;
+      top: -30%;
       transition: all 0.2s;
-      font-size: 20px; }
+      font-size: 15px; }
+    body input:not(:focus) + .form-control-placeholder {
+      transition: all 0.2s; }
     body input.red {
       border-bottom: solid 0.1em #FF0000;
       color: #FF0000; }
@@ -51,11 +63,12 @@ body {
     background-color: #000;
     color: #FFA500;
     border: solid 2px #000;
-    padding: 4% 20%;
+    padding: 5% 0%;
     border-radius: 8px;
     font-weight: bold;
     font-size: 15px;
-    cursor: pointer; }
+    cursor: pointer;
+    width: 100%; }
     body .btn.red {
       background-color: #FF0000;
       border: solid 2px #FF0000;
@@ -82,5 +95,102 @@ body {
       color: #ffbe00; }
   body .btn:active {
     opacity: 0.8; }
+
+@media only screen and (max-width: 1000px) {
+  body {
+    font-family: sans-serif; }
+    body .form-group {
+      position: relative;
+      margin-top: 5%; }
+      body .form-group .form-control-placeholder {
+        position: absolute;
+        top: 30%;
+        font-size: 30px;
+        width: 100%;
+        border-bottom: solid 0.1em #fff;
+        bottom: 13%; }
+    body input:valid + .form-control-placeholder {
+      position: absolute;
+      top: -40%;
+      transition: all 0.2s;
+      font-size: 20px; }
+    body input {
+      outline: none;
+      height: 60px;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      outline: 0;
+      background-color: transparent;
+      border: transparent;
+      color: #fff;
+      font-size: 1.9em; }
+      body input:focus + .form-control-placeholder {
+        position: absolute;
+        top: -40%;
+        transition: all 0.2s;
+        font-size: 20px; }
+      body input:not(:focus) + .form-control-placeholder {
+        transition: all 0.2s; }
+      body input.red {
+        border-bottom: solid 0.1em #FF0000;
+        color: #FF0000; }
+      body input.purple {
+        border-bottom: solid 0.1em #A020F0;
+        color: #A020F0; }
+      body input .green {
+        border-bottom: solid 0.1em #00FF00;
+        color: #00FF00; }
+      body input .yellow {
+        border-bottom: solid 0.1em #FFFF00;
+        color: #FFFF00; }
+    body .label-input {
+      color: #fff; }
+      body .label-input.red {
+        color: #FF0000; }
+      body .label-input.purple {
+        color: #A020F0; }
+      body .label-input .green {
+        color: #00FF00; }
+      body .label-input .yellow {
+        color: #FFFF00; }
+    body .btn {
+      outline: none;
+      background-color: #000;
+      color: #FFA500;
+      border: solid 2px #000;
+      padding: 5% 0%;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 28px;
+      cursor: pointer;
+      width: 100%; }
+      body .btn.red {
+        background-color: #FF0000;
+        border: solid 2px #FF0000;
+        color: #fff; }
+      body .btn.purple {
+        background-color: #A020F0;
+        border: solid 2px #A020F0;
+        color: #fff; }
+      body .btn.green {
+        background-color: #00FF00;
+        border: solid 2px #00FF00;
+        color: #fff; }
+      body .btn.yellow {
+        background-color: #FFFF00;
+        border: solid 2px #FFFF00;
+        color: #fff; }
+      body .btn.grey {
+        background-color: #b3b1af;
+        border: solid 2px #b3b1af;
+        color: #ffbe00; }
+      body .btn.white {
+        background-color: #fff;
+        border: solid 2px #fff;
+        color: #ffbe00; }
+    body .btn:active {
+      opacity: 0.8; } }
 
 /*# sourceMappingURL=global.css.map */
