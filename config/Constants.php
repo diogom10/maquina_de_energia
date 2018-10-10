@@ -7,3 +7,4 @@ defined('ANGULAR_SERVICES') OR define('ANGULAR_SERVICES', '/public/js/angular/se
 
 defined('CSS') OR define('CSS', '/public/css/');
 defined('IMAGE_DEFAULT') OR define('IMAGE_DEFAULT', '/public/assets/imgs/');
+defined('BASW_URL') OR define('BASE_URL',url('/').'/' );

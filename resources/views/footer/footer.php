@@ -16,7 +16,7 @@ if(isset($js)) {
 ?>
 
 
-
+<input type="hidden" id="base_url"  value="<?=BASE_URL?>"/>
 
 </body>
 </html>

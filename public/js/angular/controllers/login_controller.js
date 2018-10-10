@@ -1,10 +1,28 @@
 angular.module("maquina_de_energia", []);
 angular.module('maquina_de_energia').controller('login_controller', ['login_service', '$scope', function (login_service, $scope) {
 
-    login_service.doLogin('angular funcionando porra')
+
     $scope.login = true;
     $scope.cadastro = false;
 
+    $scope.user = {
+        user_name: '',
+        user_email: '',
+        user_pass: '',
+        user_cpf: '',
+        user_estado: '',
+    }
+
+    $scope.setCadastro = function () {
+
+        login_service.insert($scope.user).then(function (response) {
+            console.log(response.data)
+        }).catch(function (response) {
+            console.log(response)
+        }).finally(function () {
+            console.log("finally finished gists");
+        });
+    }
 
     $scope.toCadastro = function () {
         // var element = angular.element(document.querySelector('.container'));
@@ -13,7 +31,7 @@ angular.module('maquina_de_energia').controller('login_controller', ['login_serv
         $scope.login = false;
     }
 
-    $scope.toLogin= function () {
+    $scope.toLogin = function () {
         // var element = angular.element(document.querySelector('.container'));
         // console.log(element.hide());
         $scope.cadastro = false;

@@ -96,22 +96,22 @@ body {
   body .btn:active {
     opacity: 0.8; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1025px) {
   body {
     font-family: sans-serif; }
     body .form-group {
       position: relative;
-      margin-top: 5%; }
+      margin-top: 0%; }
       body .form-group .form-control-placeholder {
         position: absolute;
-        top: 30%;
-        font-size: 30px;
+        top: 0%;
+        font-size: 35px;
         width: 100%;
-        border-bottom: solid 0.1em #fff;
+        border-bottom: solid 1px #fff;
         bottom: 13%; }
     body input:valid + .form-control-placeholder {
       position: absolute;
-      top: -40%;
+      top: -30%;
       transition: all 0.2s;
       font-size: 20px; }
     body input {

@@ -15,5 +15,6 @@
 //    return view('login');
 //});
 
-Route::get('login','Home@login');
+Route::get('login','Login@login');
+Route::post('insert','Login@setLogin');
 Route::get('assets','Assets@example');
