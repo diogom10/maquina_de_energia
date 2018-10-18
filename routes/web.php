@@ -15,6 +15,14 @@
 //    return view('login');
 //});
 
-Route::get('login','Login@login');
-Route::post('insert','Login@setLogin');
+
+/*VIEW ACCESS*/
+Route::get('login','Login@view_login');
 Route::get('assets','Assets@example');
+Route::get('painel','Home@painel');
+/*VIEW ACCESS*/
+
+/*API ACCESS*/
+Route::post('doLogin','Login@setLogin');
+Route::post('insert','Login@setCadastro');
+/*API ACCESS*/

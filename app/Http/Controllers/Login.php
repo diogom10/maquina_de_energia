@@ -4,12 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Libraries\Template;
-use App\Model\LoginModel;
+use App\Libraries\Lib_login;
+
 
 class Login extends Controller
 {
+    public $lib_login;
 
-    public function login()
+    public function __construct()
+    {
+        $this->lib_login = new Lib_login();
+    }
+
+
+    public function view_login()
     {
         $assets = [
             'css' => [
@@ -25,14 +33,15 @@ class Login extends Controller
 
     }
 
-    public function setLogin(Request $dados)
+    public function setCadastro(Request $dados)
     {
-        $response['success'] = true;
-        $user_data =  $dados->post();
-        $model = new LoginModel();
-        $model->insertUser($user_data );
-        return $response;
+        $data = $dados->post();
+        return $this->lib_login->cadastrar($data);
     }
 
-
+    public function setLogin(Request $dados)
+    {
+        $data = $dados->post();
+        return $this->lib_login->login($data);
+    }
 }

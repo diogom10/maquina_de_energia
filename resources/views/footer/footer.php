@@ -1,6 +1,7 @@
 
 <script src="<?= url('/').JS_LIB.'angular.min.js'?>" type="text/javascript"></script>
 <script src="<?= url('/').JS_LIB.'jquery-3.3.1.min.js'?>" type="text/javascript"></script>
+
 <?php
 if(isset($js)) {
     if (count($js) > 0) {
@@ -16,7 +17,7 @@ if(isset($js)) {
 ?>
 
 
-<input type="hidden" id="base_url"  value="<?=BASE_URL?>"/>
+<input type="hidden" id="base_url"  value="<?=url('/').'/'?>"/>
 
 </body>
 </html>

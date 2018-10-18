@@ -18,7 +18,7 @@
                         <form>
                             <div style="margin-top: 5%">
                                 <div class="form-group">
-                                    <input type="text" name="email" maxlength="30" autocomplete="off" required
+                                    <input  ng-model="login_data.user_name" type="text" name="email" maxlength="30" autocomplete="off" required
                                            class="ipt-login"/>
 
                                     <label for="email" class="form-control-placeholder">Email ou Usuario</label>
@@ -28,17 +28,18 @@
                             </div>
                             <div style="margin-top: 5%">
                                 <div class="form-group">
-                                    <input type="password" name="senha" maxlength="20" autocomplete="off" required
+
+                                    <input  ng-model="login_data.user_pass" type="password" name="senha" maxlength="20" autocomplete="off" required
                                            class="ipt-login"/>
-                                    <label for="senha" class="form-control-placeholder">Senha</label>
+                                    <label for="senha" class="form-control-placeholder">Senha </label>
                                     <label ng-show="false">Senha esta incorreta</label>
                                 </div>
                             </div>
 
                         </form>
                         <div class="container-buttons">
-                            <button class="btn white btn-config">Entrar</button>
-                            <button ng-click="toCadastro()" class="btn grey btn-config">Cadastre-se</button>
+                            <button ng-click="login()" class="btn white btn-config"> <label>Entrar</label> </button>
+                            <button ng-click="toCadastro()" class="btn grey btn-config">Cadastre-se </button>
                         </div>
                     </div>
 

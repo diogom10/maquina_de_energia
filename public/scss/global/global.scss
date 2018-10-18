@@ -1,7 +1,38 @@
+.loader {
+  border: 5px solid #fff;
+  border-top: 5px solid #ffbe00;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+
+&.big {
+    width: 120px;
+    height: 120px;
+  }
+
+  &.medium {
+    width: 60px;
+    height: 60px;
+  }
+
+  &.little {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 body {
   font-family: sans-serif;
 
-  .form-group{
+  .form-group {
     position: relative;
     margin-top: 0%;
     .form-control-placeholder {
@@ -144,7 +175,7 @@ body {
 
       background-color: #fff;
       border: solid 2px #fff;
-      color:#ffbe00;
+      color: #ffbe00;
 
     }
 
@@ -154,12 +185,11 @@ body {
   }
 }
 
-
 @media only screen and (max-width: 1025px) {
   body {
     font-family: sans-serif;
 
-    .form-group{
+    .form-group {
       position: relative;
       margin-top: 0%;
       .form-control-placeholder {
@@ -299,7 +329,7 @@ body {
 
         background-color: #fff;
         border: solid 2px #fff;
-        color:#ffbe00;
+        color: #ffbe00;
 
       }
 
