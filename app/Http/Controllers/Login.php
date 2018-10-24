@@ -28,9 +28,7 @@ class Login extends Controller
                 url('/') . ANGULAR_SERVICES . 'login.service.js',
             ]
         ];
-
         return Template::load('login/login', 'assets', $assets);
-
     }
 
     public function setCadastro(Request $dados)

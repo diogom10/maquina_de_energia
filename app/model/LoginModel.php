@@ -50,15 +50,32 @@ class LoginModel extends Model
     public function getUser($dados)
     {
         $response = DB::table('tb_users')
-            ->select('user_email', 'user_name', 'user_id', 'user_cpf', 'user_estado')
+            ->select('user_email', 'user_name', 'user_id', 'user_cpf', 'user_estado', 'user_pass' , 'user_uid')
             ->where('user_name', $dados)
             ->orWhere('user_email', $dados)->first();
         return $response;
     }
 
+    public function getUserID($dados)
+    {
+        $response = DB::table('tb_users')
+            ->select('user_id')
+            ->where('user_id', $dados)->first();
+        return isset($response->user_id) ? true : false;
+    }
+
     public function insertSession($dados)
     {
         DB::table('tb_sessions')->insert($dados);
+    }
+
+    public function updateUser($update , $user_id)
+    {
+        DB::table('tb_users')->
+        where('user_id' , $user_id)->
+        update($update);
+
+
     }
 
 }

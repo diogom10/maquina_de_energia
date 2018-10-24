@@ -1,3 +1,7 @@
+//
+// import Constants from '../../Constants'
+//
+
 angular.module("maquina_de_energia", []);
 angular.module('maquina_de_energia').controller('login_controller', ['login_service', '$scope', function (login_service, $scope) {
 
@@ -11,6 +15,7 @@ angular.module('maquina_de_energia').controller('login_controller', ['login_serv
         user_pass: '',
         user_cpf: '',
         user_estado: '',
+        isMobile:false
     };
 
     $scope.login_data = {
