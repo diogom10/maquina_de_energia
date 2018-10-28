@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="maquina_de_energia">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= url('/').CSS.'global/global.css'?>">
     <link rel="stylesheet" href="<?= url('/').CSS.'header/header.css'?>">
     <link rel="stylesheet" href="<?= url('/').CSS.'footer/footer.css'?>">

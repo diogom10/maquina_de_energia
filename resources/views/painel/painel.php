@@ -1,5 +1,4 @@
 <?= view('header/header')->render() ?>
-
-    LOGADO
+<?= session()->flush()?>
 
 <?= view('footer/footer')->render() ?>

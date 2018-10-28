@@ -10,25 +10,21 @@ namespace App\helper;
 
 require 'vendor/autoload.php';
 
-use Google\Cloud\Firestore\FirestoreClient;
 use Kreait\Firebase\Factory;
 use Kreait\Firebase\ServiceAccount;
+use MrShan0\PHPFirestore\FireStoreApiClient;
 
 class Firestore_helper
 {
-
-
     public $config;
 
     public function __construct()
     {
-      $this->config = $this->access();
+        $this->config = $this->accessGoogleDataBase();
     }
 
-
-    public function access()
+    public function accessGoogleDataBase()
     {
-
         $config = [
             'apiKey' => env('FIRESTORE_APIKEY'),
             'authDomain' => env('FIRESTORE_AUTHDOMAIN'),
@@ -46,13 +42,16 @@ class Firestore_helper
 
     public function firestore()
     {
-        return $firestore = new FirestoreClient($this->config);
+        $firestore = new FireStoreApiClient($this->config['projectId'], $this->config['apiKey'], [
+            'database' => $this->config['databaseURL'],
+        ]);
+        return $firestore;
     }
 
 
     public function firebase()
     {
-        $serviceAccount = ServiceAccount::fromJsonFile($this->config["json_file"] );
+        $serviceAccount = ServiceAccount::fromJsonFile($this->config["json_file"]);
         $firebase = (new Factory)
             ->withServiceAccount($serviceAccount)
             ->withDatabaseUri($this->config["databaseURL"])

@@ -18,16 +18,19 @@ class Login_helper
     {
         $login_model = new LoginModel();
         $session_id = session()->get('user_id_fk');
-        if ($session_id) {
+
+        if (!empty($session_id)) {
             $validate = $login_model->getUserID($session_id);
             if ($validate) {
 
             } else {
                 header("Location:".url('/')."/login");
+                die();
 
             }
         } else {
             header("Location:".url('/')."/login");
+            die();
         }
     }
 

@@ -78,4 +78,12 @@ class LoginModel extends Model
 
     }
 
+    public function deleteUser($user_id)
+    {
+        DB::table('tb_users')->
+        where('user_id' , $user_id)->
+        delete();
+    }
+
+
 }

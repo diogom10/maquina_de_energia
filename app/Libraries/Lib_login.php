@@ -20,6 +20,7 @@ class Lib_login
 
     public function __construct()
     {
+        date_default_timezone_set('America/Sao_Paulo');
         $helper = new Firestore_helper();
         $this->firebase = $helper->firebase();
         $this->firestore = $helper->firestore();
@@ -47,18 +48,25 @@ class Lib_login
             $validate = $this->login_model->validEmail($user_data['user_email']);
             if ($validate) {
                 $this->login_model->insertUser($user_data);
-                $response['success'] = true;
-                $response['msg'] = 'Cadastro feito com sucesso';
                 $user = $this->login_model->getUser($user_data['user_name']);
-                $this->cadastrarFirestore($user);
-
-                $data['isMobile'] ? ($response['data'] = $user) : ($this->storageSession($user));
+                $validate = $this->cadastrarFirestore($user);
+                if ($validate) {
+                    $response['success'] = true;
+                    $response['msg'] = 'Cadastro feito com sucesso';
+                    $data['isMobile'] ? ($response['data'] = $user) : ($this->storageSession($user));
+                } else {
+                    $response['success'] = false;
+                    $response['type'] = 'interno';
+                    $response['msg'] = 'Parece que ocorreu um erro inesperado, por favor se cadastre novamente!';
+                }
             } else {
                 $response['success'] = false;
+                $response['type'] = 'email';
                 $response['msg'] = 'Este email ja esta sendo usado';
             }
         } else {
             $response['success'] = false;
+            $response['type'] = 'nome';
             $response['msg'] = 'Este nome de usuario ja esta sendo usado';
         }
 
@@ -69,27 +77,31 @@ class Lib_login
 
     public function cadastrarFirestore($user)
     {
-
-        $firebaseInstance = $this->firebase;
-        $firestoreInstance = $this->firestore;
-        $auth = $firebaseInstance->getAuth();
+        $retorno = true;
+        $auth = $this->firebase->getAuth();
         $new = $auth->createUserWithEmailAndPassword($user->user_email, $user->user_pass);
         $update = ['user_uid' => $new->uid];
         $this->login_model->updateUser($update, $user->user_id);
-        $data = [
-            'user_id' => $user->user_id,
-            'user_name' => $user->user_name,
-        ];
-        $firestoreInstance->collection('users')->document($new->uid)->set($data);
+        if (isset($new->uid)) {
+            $data = [
+                'user_id' => $user->user_id,
+                'user_name' => $user->user_name,
+                'logged' => true,
+                'timestamp'=>date('Y-m-d G:i:s')
+            ];
+            $documentid = (string)$new->uid;
+            $this->firestore->setDocument('users', $documentid, $data);
+        } else {
+            $retorno = false;
+            $this->login_model->deleteUser($user->user_id);
+        }
 
+        return $retorno;
     }
 
     public function login($data)
     {
-
-
         $response = [];
-        $validate = true;
         $user_data = [
             'user_name' => $data['user_name'] ?? null,
             'user_pass' => sha1($data['user_pass']) . SEMENTE ?? null,
@@ -105,10 +117,12 @@ class Lib_login
                 $data['isMobile'] ? ($response['data'] = $user) : ($this->storageSession($user));
             } else {
                 $response['success'] = false;
+                $response['type'] = 'senha';
                 $response['msg'] = 'Senha incorreta';
             }
         } else {
             $response['success'] = false;
+            $response['type'] = 'nome';
             $response['msg'] = 'Este usuario ou email não existe';
         }
 
@@ -123,7 +137,10 @@ class Lib_login
             'session_ip' => $request->ip(),
             'last_activity' => date('Y-m-d H:i:s')
         ];
-        $this->login_model->insertSession($session);
+        $this->firestore->updateDocument('users',  $data->user_uid, [
+           'logged' => true,
+            'timestamp'=>date('Y-m-d G:i:s')
+        ], true);
         session($session);
     }
 

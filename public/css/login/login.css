@@ -73,7 +73,8 @@
           margin: 0 auto;
           margin-top: 2%;
           display: flex;
-          justify-content: space-between; }
+          justify-content: space-between;
+          margin-bottom: 5%; }
           .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .ipt-cadastro {
             width: 100%; }
           .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro {
@@ -176,6 +177,7 @@
             margin: 0 auto;
             margin-top: 11%;
             display: flex;
+            margin-bottom: 5%;
             justify-content: space-between; }
             .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .ipt-cadastro {
               width: 100%; }

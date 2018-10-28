@@ -11,7 +11,6 @@ class Home extends Controller
     public function painel()
     {
        Login_helper::validateSession();
-       die();
         return Template::load('painel/painel');
 
     }
