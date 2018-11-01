@@ -34,7 +34,7 @@ class Login_helper
         }
     }
 
-    public static function finalSession()
+    public static function finaleSession()
     {
         session()->flush();
     }

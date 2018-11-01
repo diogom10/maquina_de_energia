@@ -1,4 +1,4 @@
-<?= view('header/header', ['css' => $assets['css']])->render() ?>
+<?= view('header/header', ['css' => $assets['css'] ,'active_header'=> $assets['active_header']] )->render() ?>
 
 <div ng-controller="login_controller">
     <div class="image-container"

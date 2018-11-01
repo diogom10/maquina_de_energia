@@ -32,18 +32,15 @@ class Lib_login
     {
         $validate = true;
         $response = [];
-
-
         $user_data = [
-            'user_name' => $data['user_name'] ?? null,
-            'user_email' => $data['user_email'] ?? null,
+            'user_name' => strtolower($data['user_name']) ?? null,
+            'user_email' => strtolower($data['user_email']) ?? null,
             'user_pass' => sha1($data['user_pass']) . SEMENTE ?? null,
             'user_cpf' => $data['user_cpf'] ?? null,
             'user_estado' => $data['user_estado'] ?? null,
             'user_uid' => null
         ];
         $validate = $this->login_model->validUserName($user_data['user_name']);
-
         if ($validate) {
             $validate = $this->login_model->validEmail($user_data['user_email']);
             if ($validate) {
@@ -102,12 +99,13 @@ class Lib_login
     public function login($data)
     {
         $response = [];
+
         $user_data = [
-            'user_name' => $data['user_name'] ?? null,
+            'user_name' =>  strtolower($data['user_name']) ?? null,
             'user_pass' => sha1($data['user_pass']) . SEMENTE ?? null,
         ];
-
         $validate = $this->login_model->validData($user_data['user_name']);
+
         if ($validate) {
             $validate = $this->login_model->validPass($user_data['user_pass']);
             if ($validate) {

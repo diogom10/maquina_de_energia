@@ -1,4 +1,5 @@
 angular.module('maquina_de_energia').service('login_service', ['$http', function ($http) {
+
     var base_url = document.getElementById("base_url").value;
 
     var insert = function (params) {
@@ -13,4 +14,5 @@ angular.module('maquina_de_energia').service('login_service', ['$http', function
     };
 
 }]);
+
 

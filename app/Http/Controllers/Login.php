@@ -26,7 +26,9 @@ class Login extends Controller
             'js' => [
                 url('/') . ANGULAR_CTRL . 'login_controller.js',
                 url('/') . ANGULAR_SERVICES . 'login.service.js',
-            ]
+                url('/') . ANGULAR_CONSTANTS
+            ],
+            'active_header' => false
         ];
         return Template::load('login/login', 'assets', $assets);
     }

@@ -1,4 +1,4 @@
-<?= view('header/header')->render() ?>
-<?= session()->flush()?>
+<?= view('header/header', ['css' => $assets['css'] ,'active_header'=> $assets['active_header']] )->render() ?>
 
-<?= view('footer/footer')->render() ?>
+    <div class="container"> </div>
+<?= view('footer/footer', ['js' => $assets['js']])->render() ?>
