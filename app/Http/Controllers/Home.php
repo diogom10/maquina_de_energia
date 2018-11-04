@@ -9,7 +9,6 @@ use App\Libraries\Template;
 
 class Home extends Controller
 {
-
     public function painel()
     {
        Login_helper::validateSession();

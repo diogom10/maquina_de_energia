@@ -28,9 +28,18 @@
 <?php if ($active_header) { ?>
 <div class="header">
     <div class="wrapper">
-        <div class="content"></div>
-        <div class="content"></div>
-        <div class="content"></div>
+        <div class="content">
+        </div>
+        <div class="content">
+            <div class="image-logo" style="background-image : url(<?= url('/') . IMAGE_DEFAULT . "logo.png" ?>)"></div>
+        </div>
+        <div class="content">
+            <div class="list-icons">
+                <div class="container-icons">
+                    <div class="image-icons" style="background-image : url(<?= url('/') . SVG . "cogs-solid.svg" ?>)"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?php } ?>

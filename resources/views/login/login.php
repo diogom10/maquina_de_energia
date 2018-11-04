@@ -2,7 +2,7 @@
 
 <div ng-controller="login_controller">
     <div class="image-container"
-         ng-style="{'background-image' : 'url(<?= url('/') . IMAGE_DEFAULT . 'energia2.png' ?>)'}">
+         ng-style="{'background-image' : 'url(<?= url('/') . IMAGE_DEFAULT . "energia2.png" ?>)'}">
         <div class="wrapper">
             <div class="header-login">
                 <div class="title">
