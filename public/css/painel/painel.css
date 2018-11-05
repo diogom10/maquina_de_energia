@@ -1,7 +1,7 @@
 .container {
   left: 0;
   right: 0;
-  top: 7%;
+  top: 0;
   bottom: 0;
   position: absolute;
   z-index: 1;
@@ -10,6 +10,6 @@
   -webkit-overflow-scrolling: touch;
   will-change: scroll-position;
   contain: size style layout;
-  background-image: linear-gradient(to top, rgba(255, 0, 0, 0), #f3f3f3); }
+  background-color: #f3f3f3; }
 
 /*# sourceMappingURL=painel.css.map */

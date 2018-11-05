@@ -1,6 +1,9 @@
 
 <script src="<?= url('/').JS_LIB.'angular.min.js'?>" type="text/javascript"></script>
 <script src="<?= url('/').JS_LIB.'jquery-3.3.1.min.js'?>" type="text/javascript"></script>
+<script src="<?= url('/').ANGULAR_CTRL.'header_controller.js'?>" type="text/javascript"></script>
+<script src="<?= url('/').ANGULAR_SERVICES.'header.service.js'?>" type="text/javascript"></script>
+
 
 <!-- Firebase App is always required and must be first -->
 <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase-app.js"></script>

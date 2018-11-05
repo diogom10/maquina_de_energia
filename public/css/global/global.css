@@ -4,7 +4,8 @@
   100% {
     transform: rotate(360deg); } }
 body {
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  overflow: hidden; }
   body .form-group {
     position: relative;
     margin-top: 0%; }

@@ -19,6 +19,7 @@ class Home extends Controller
                 url('/') . CSS . 'painel/painel.css'
             ],
             'js' => [
+                url('/') . ANGULAR_CONSTANTS
             ],
             'active_header' => true
         ];
