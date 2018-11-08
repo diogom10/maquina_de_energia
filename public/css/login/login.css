@@ -74,7 +74,7 @@
           margin-top: 2%;
           display: flex;
           justify-content: space-between;
-          margin-bottom: 5%; }
+          margin-bottom: 6%; }
           .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .ipt-cadastro {
             width: 100%; }
           .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro {
@@ -119,7 +119,7 @@
       height: 100%; }
       .image-container .wrapper .header-login {
         width: auto;
-        min-height: 180px;
+        min-height: 100px;
         background-image: linear-gradient(to top, rgba(255, 0, 0, 0), black);
         display: flex; }
         .image-container .wrapper .header-login .title {
@@ -129,7 +129,7 @@
           align-self: center; }
           .image-container .wrapper .header-login .title .text-title {
             width: auto;
-            font-size: 6.1em;
+            font-size: 3em;
             flex-grow: 49;
             font-weight: bold;
             font-family: sans-serif; }
@@ -145,7 +145,7 @@
           margin-top: 10%; }
           .image-container .wrapper .body-login .container .container-header {
             width: 100%;
-            font-size: 2.1em;
+            font-size: 1.7em;
             text-align: center;
             font-weight: bold;
             font-family: sans-serif; }
@@ -157,7 +157,7 @@
               margin-top: 4%; }
               .image-container .wrapper .body-login .container .container-input .container-buttons .btn-config {
                 width: 100%;
-                height: 100px;
+                height: 47px;
                 margin-bottom: 5%; }
           .image-container .wrapper .body-login .container .ipt-login {
             width: 100%; }

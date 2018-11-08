@@ -3,9 +3,13 @@
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+.pointer {
+  cursor: pointer; }
+
 body {
   font-family: sans-serif;
-  overflow: hidden; }
+  overflow: hidden;
+  color: #fff; }
   body .form-group {
     position: relative;
     margin-top: 0%; }
@@ -110,16 +114,16 @@ body {
       margin-top: 0%; }
       body .form-group .form-control-placeholder {
         position: absolute;
-        top: 0%;
-        font-size: 35px;
+        top: 42%;
+        font-size: 16px;
         width: 100%;
         border-bottom: solid 1px #fff;
-        bottom: 13%; }
+        bottom: 25%; }
     body input:valid + .form-control-placeholder {
       position: absolute;
-      top: -30%;
+      top: -10%;
       transition: all 0.2s;
-      font-size: 20px; }
+      font-size: 16px; }
     body input {
       outline: none;
       height: 60px;
@@ -131,12 +135,12 @@ body {
       background-color: transparent;
       border: transparent;
       color: #fff;
-      font-size: 1.9em; }
+      font-size: 1.1em; }
       body input:focus + .form-control-placeholder {
         position: absolute;
-        top: -40%;
+        top: -10%;
         transition: all 0.2s;
-        font-size: 20px; }
+        font-size: 16px; }
       body input:not(:focus) + .form-control-placeholder {
         transition: all 0.2s; }
       body input.red {
@@ -169,7 +173,7 @@ body {
       padding: 5% 0%;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 28px;
+      font-size: 15px;
       cursor: pointer;
       width: 100%; }
       body .btn.red {

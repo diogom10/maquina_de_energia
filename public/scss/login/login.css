@@ -1,4 +1,208 @@
-.container {
-  background-color: red; }
+.image-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; }
+  .image-container .wrapper {
+    width: 100%;
+    height: 100%; }
+    .image-container .wrapper .header-login {
+      width: auto;
+      min-height: 80px;
+      background-image: linear-gradient(to top, rgba(255, 0, 0, 0), black);
+      display: flex; }
+      .image-container .wrapper .header-login .title {
+        text-align: center;
+        margin: 0 auto;
+        width: 50%;
+        align-self: center; }
+        .image-container .wrapper .header-login .title .text-title {
+          width: auto;
+          font-size: 3.1em;
+          flex-grow: 49;
+          font-weight: bold;
+          font-family: sans-serif; }
+    .image-container .wrapper .body-login {
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      min-height: 50%;
+      display: flex; }
+      .image-container .wrapper .body-login .container {
+        width: 50%;
+        margin-top: 10%;
+        position: relative; }
+        .image-container .wrapper .body-login .container .container-header {
+          width: 100%;
+          font-size: 30px;
+          text-align: center;
+          font-weight: bold;
+          font-family: sans-serif; }
+        .image-container .wrapper .body-login .container .container-input {
+          width: 50%;
+          margin: 0 auto; }
+          .image-container .wrapper .body-login .container .container-input .container-buttons {
+            width: 100%;
+            margin-top: 4%; }
+            .image-container .wrapper .body-login .container .container-input .container-buttons .btn-config {
+              width: 100%;
+              height: 60px;
+              margin-bottom: 5%; }
+        .image-container .wrapper .body-login .container .ipt-login {
+          width: 100%; }
+      .image-container .wrapper .body-login .container-cadastro {
+        width: 50%;
+        margin-top: 10%;
+        position: relative;
+        min-height: 100px; }
+        .image-container .wrapper .body-login .container-cadastro .container-header {
+          width: 100%;
+          font-size: 30px;
+          text-align: center;
+          font-weight: bold;
+          font-family: sans-serif; }
+        .image-container .wrapper .body-login .container-cadastro .container-input-cadastro {
+          width: 70%;
+          margin: 0 auto;
+          margin-top: 2%;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 6%; }
+          .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .ipt-cadastro {
+            width: 100%; }
+          .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro {
+            margin-right: 2%;
+            width: 90%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_auto {
+              width: auto; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_80 {
+              width: 80%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_70 {
+              width: 70%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_60 {
+              width: 60%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_50 {
+              width: 50%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_40 {
+              width: 40%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_30 {
+              width: 30%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_20 {
+              width: 20%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_10 {
+              width: 10%; }
+        .image-container .wrapper .body-login .container-cadastro .ipt-cadastro {
+          width: 100%; }
+
+@media only screen and (max-width: 1025px) {
+  .image-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; }
+    .image-container .wrapper {
+      width: 100%;
+      height: 100%; }
+      .image-container .wrapper .header-login {
+        width: auto;
+        min-height: 100px;
+        background-image: linear-gradient(to top, rgba(255, 0, 0, 0), black);
+        display: flex; }
+        .image-container .wrapper .header-login .title {
+          text-align: center;
+          margin: 0 auto;
+          width: 50%;
+          align-self: center; }
+          .image-container .wrapper .header-login .title .text-title {
+            width: auto;
+            font-size: 3em;
+            flex-grow: 49;
+            font-weight: bold;
+            font-family: sans-serif; }
+      .image-container .wrapper .body-login {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 50%;
+        display: flex; }
+        .image-container .wrapper .body-login .container {
+          position: relative;
+          width: 75%;
+          margin-top: 10%; }
+          .image-container .wrapper .body-login .container .container-header {
+            width: 100%;
+            font-size: 1.7em;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif; }
+          .image-container .wrapper .body-login .container .container-input {
+            width: 100%;
+            margin: 0 auto; }
+            .image-container .wrapper .body-login .container .container-input .container-buttons {
+              width: 100%;
+              margin-top: 4%; }
+              .image-container .wrapper .body-login .container .container-input .container-buttons .btn-config {
+                width: 100%;
+                height: 47px;
+                margin-bottom: 5%; }
+          .image-container .wrapper .body-login .container .ipt-login {
+            width: 100%; }
+        .image-container .wrapper .body-login .container-cadastro {
+          width: 100%;
+          margin-top: 10%;
+          position: relative;
+          min-height: 100px; }
+          .image-container .wrapper .body-login .container-cadastro .container-header {
+            width: 100%;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-family: sans-serif; }
+          .image-container .wrapper .body-login .container-cadastro .container-input-cadastro {
+            width: 75%;
+            margin: 0 auto;
+            margin-top: 11%;
+            display: flex;
+            margin-bottom: 5%;
+            justify-content: space-between; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .ipt-cadastro {
+              width: 100%; }
+            .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro {
+              margin-right: 2%;
+              width: 90%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_auto {
+                width: auto; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_80 {
+                width: 80%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_70 {
+                width: 70%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_60 {
+                width: 60%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_50 {
+                width: 50%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_40 {
+                width: 40%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_30 {
+                width: 30%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_20 {
+                width: 20%; }
+              .image-container .wrapper .body-login .container-cadastro .container-input-cadastro .grid-cadastro.t_10 {
+                width: 10%; }
+          .image-container .wrapper .body-login .container-cadastro .ipt-cadastro {
+            width: 100%; } }
 
 /*# sourceMappingURL=login.css.map */

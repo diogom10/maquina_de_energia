@@ -6,10 +6,13 @@
     transform: rotate(360deg);
   }
 }
-
+.pointer{
+  cursor: pointer;
+}
 body {
   font-family: sans-serif;
   overflow: hidden;
+  color: #fff;
   .form-group {
     position: relative;
     margin-top: 0%;
@@ -169,26 +172,25 @@ body {
 @media only screen and (max-width: 1025px) {
   body {
     font-family: sans-serif;
-
     .form-group {
       position: relative;
       margin-top: 0%;
       .form-control-placeholder {
         position: absolute;
-        top: 0%;
-        font-size: 35px;
+        top: 42%;
+        font-size: 16px;
         width: 100%;
         border-bottom: solid 1px #fff;
-        bottom: 13%;
+        bottom: 25%;
       }
 
     }
 
     input:valid + .form-control-placeholder {
       position: absolute;
-      top: -30%;
+      top: -10%;
       transition: all 0.2s;
-      font-size: 20px;
+      font-size: 16px;
     }
     input {
       outline: none;
@@ -202,13 +204,13 @@ body {
       border: transparent;
       //border-bottom: solid 0.1em #fff;
       color: #fff;
-      font-size: 1.9em;
+      font-size: 1.1em;;
 
       &:focus + .form-control-placeholder {
         position: absolute;
-        top: -40%;
+        top: -10%;
         transition: all 0.2s;
-        font-size: 20px;
+        font-size: 16px;
 
       }
 
@@ -267,7 +269,7 @@ body {
       padding: 5% 0%;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 28px;
+      font-size: 15px;
       cursor: pointer;
       width: 100%;
 

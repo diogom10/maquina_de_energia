@@ -16,7 +16,7 @@
                     </div>
                     <div class="container-input">
                         <form>
-                            <div style="margin-top: 5%">
+                            <div style="margin-top:15%">
                                 <div class="form-group">
                                     <input ng-model="login_data.user_name" type="text" name="email" maxlength="30"
                                            autocomplete="off" required
@@ -29,7 +29,7 @@
 
                                 </div>
                             </div>
-                            <div style="margin-top: 5%">
+                            <div style="margin-top: 10%">
                                 <div class="form-group">
                                     <input ng-model="login_data.user_pass" type="password" name="senha" maxlength="20"
                                            autocomplete="off" required
