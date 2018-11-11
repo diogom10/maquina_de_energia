@@ -14,27 +14,30 @@ use App\Model\LoginModel;
 class Login_helper
 {
 
-    public static function validateSession()
+    public function validateSession($login = false)
     {
         $login_model = new LoginModel();
         $session_id = session()->get('user_id_fk');
-
         if (!empty($session_id)) {
             $validate = $login_model->getUserID($session_id);
             if ($validate) {
-
+                if ($login) {
+                    header("Location:" . url('/') . "/painel");
+                    die();
+                }
             } else {
-                header("Location:".url('/')."/login");
+                header("Location:" . url('/') . "/login");
                 die();
-
             }
         } else {
-            header("Location:".url('/')."/login");
-            die();
+            if (!$login) {
+                header("Location:" . url('/') . "/login");
+                die();
+            }
         }
     }
 
-    public static function finaleSession()
+    public function finaleSession()
     {
         session()->flush();
     }

@@ -16,13 +16,61 @@
 //});
 
 
-/*VIEW ACCESS*/
+/*VIEW ACCESS LOGIN*/
 Route::get('login','Login@view_login');
 Route::get('assets','Assets@example');
-Route::get('painel','Home@painel');
-/*VIEW ACCESS*/
+/*VIEW ACCESS LOGIN*/
 
-/*API ACCESS*/
+
+
+/*API ACCESS LOGIN*/
 Route::post('doLogin','Login@setLogin');
 Route::post('insert','Login@setCadastro');
-/*API ACCESS*/
+Route::post('doLogout','Login@setLogout');
+/*API ACCESS LOGIN*/
+
+
+
+/*VIEW ACCESS HOME*/
+Route::get('home','Home@view_Home');
+
+/*VIEW ACCESS HOME*/
+
+
+/*API ACCESS HOME*/
+/*API ACCESS HOME*/
+
+
+
+/*VIEW ACCESS PAINEL*/
+Route::get('painel','painel@view_painel');
+
+/*VIEW ACCESS PAINEL*/
+
+
+/*API ACCESS PAINEL*/
+/*API ACCESS PAINEL*/
+
+
+
+/*VIEW ACCESS RELATORIOS*/
+Route::get('relatorios','Relatorios@view_relatorios');
+
+/*VIEW ACCESS RELATORIOS*/
+
+
+/*API ACCESS RELATORIOS*/
+/*API ACCESS RELATORIOS*/
+
+
+/*VIEW ACCESS PROFILE*/
+Route::get('profile','Profile@view_profile');
+
+/*VIEW ACCESS PROFILE*/
+
+/*API ACCESS PROFILE*/
+/*API ACCESS PROFILE*/
+
+
+
+

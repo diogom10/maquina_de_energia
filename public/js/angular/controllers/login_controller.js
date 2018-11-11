@@ -64,6 +64,7 @@ angular.module('maquina_de_energia').controller('login_controller', ['login_serv
             $scope.load.cadastro = false;
             if (resposta.success) {
                 window.location.replace(base_url + 'painel');
+
             } else {
                 switch (resposta.type) {
                     case 'nome':
@@ -97,6 +98,8 @@ angular.module('maquina_de_energia').controller('login_controller', ['login_serv
             let resposta = response.data;
             if (resposta.success) {
                 window.location.replace(base_url + 'painel');
+
+                console.log(base_url)
             } else {
                 switch (resposta.type) {
                     case 'nome':

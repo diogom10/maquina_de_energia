@@ -1,15 +1,9 @@
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
-.pointer {
-  cursor: pointer; }
-
 body {
   font-family: sans-serif;
   overflow: hidden;
   color: #fff; }
+  body html.touch *:hover {
+    pointer-events: none !important; }
   body .form-group {
     position: relative;
     margin-top: 0%; }
@@ -22,6 +16,19 @@ body {
       bottom: 23%;
       left: 0%;
       text-align: left; }
+  body .body-default {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+    background-color: #f3f3f3; }
   body input:valid + .form-control-placeholder {
     position: absolute;
     top: -30%;
@@ -119,6 +126,19 @@ body {
         width: 100%;
         border-bottom: solid 1px #fff;
         bottom: 25%; }
+    body .body-default {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 1;
+      display: block;
+      overflow: hidden;
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position;
+      contain: size style layout;
+      background-color: #f3f3f3; }
     body input:valid + .form-control-placeholder {
       position: absolute;
       top: -10%;

@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#f37f1a"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= url('/') . CSS . 'global/global.css' ?>">
@@ -49,39 +50,21 @@
             </div>
             <div class="content">
                 <div class="list-icons">
-                    <div class="container-icons">
+                    <div class="container-icons" ng-repeat="i in icons track by $index" ng-class="{'active':i.active}"
+                         ng-click="redirectPage(base_url+i.name)">
                         <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "home-solid.svg#Layer_1" ?>"></use>
+                            <use xlink:href="{{base_url+i.icon}}"></use>
                         </svg>
+
                     </div>
-                    <div class="container-icons">
-                        <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "medidor-solid.svg#Layer_1" ?>"></use>
-                        </svg>
-                    </div>
-                    <div class="container-icons">
-                        <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "list.svg#Layer_1" ?>"></use>
-                        </svg>
-                    </div>
-                    <div class="container-icons">
-                        <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "user-regular.svg#Layer_1" ?>"></use>
-                        </svg>
-                    </div>
-                    <!--                    <div class="container-icons">-->
-                    <!--                        <svg class="image-icons">-->
-                    <!--                            <use xlink:href="-->
-                    <? //= url('/') . SVG . "cogs-solid.svg#Layer_1" ?><!--"></use>-->
-                    <!--                        </svg>-->
-                    <!--                    </div>-->
+
                 </div>
             </div>
         </div>
     </div>
     <div class="side-bar" id="side">
         <div class=" container-side">
-            <div class="close"  ng-click="moveSideBar()">
+            <div class="close" ng-click="moveSideBar()">
                 <i class="fas fa-times"></i>
             </div>
             <div class="container-list">
@@ -110,7 +93,7 @@
                     <li class="topic-style">Sobre o Sistema</li>
                     <li class="topic-style">Central de Ajuda (FAQ)</li>
                     <li class="topic-style">Relatar Problemas</li>
-                    <li class="topic-style">Sair</li>
+                    <li class="topic-style" ng-click="logout()">Sair</li>
                 </ul>
             </div>
         </div>
@@ -120,24 +103,9 @@
         <div class="wrapper">
             <div class="content">
                 <div class="list-icons">
-                    <div class="container-icons">
+                    <div class="container-icons" ng-repeat="i in icons track by $index" ng-class="{'active':i.active}"   ng-click="redirectPage(base_url+i.name)">
                         <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "list.svg#Layer_1" ?>"></use>
-                        </svg>
-                    </div>
-                    <div class="container-icons">
-                        <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "medidor-solid.svg#Layer_1" ?>"></use>
-                        </svg>
-                    </div>
-                    <div class="container-icons">
-                        <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "home-solid.svg#Layer_1" ?>"></use>
-                        </svg>
-                    </div>
-                    <div class="container-icons">
-                        <svg class="image-icons">
-                            <use xlink:href="<?= url('/') . SVG . "user-regular.svg#Layer_1" ?>"></use>
+                            <use xlink:href="{{base_url+i.icon}}"></use>
                         </svg>
                     </div>
 
@@ -150,4 +118,6 @@
             </div>
         </div>
     </div>
+
+    <div class="body-default">
 <?php } ?>

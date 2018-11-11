@@ -1,4 +1,3 @@
-
 angular.module('maquina_de_energia').constant('config', {
 
     CONFIG_FIREBASE: {
@@ -9,8 +8,14 @@ angular.module('maquina_de_energia').constant('config', {
         storageBucket: "machines-1f65f.appspot.com",
         messagingSenderId: "532015962523",
     },
+    IMAGE: {
+        CSS: "/public/css/",
+        SVG: "/public/assets/svg/",
+    },
+
 
 });
+
 
 
 

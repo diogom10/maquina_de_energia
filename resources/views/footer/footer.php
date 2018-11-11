@@ -1,4 +1,6 @@
 
+
+</div>
 <script src="<?= url('/').JS_LIB.'angular.min.js'?>" type="text/javascript"></script>
 <script src="<?= url('/').JS_LIB.'jquery-3.3.1.min.js'?>" type="text/javascript"></script>
 <script src="<?= url('/').ANGULAR_CTRL.'header_controller.js'?>" type="text/javascript"></script>

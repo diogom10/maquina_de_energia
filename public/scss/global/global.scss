@@ -1,15 +1,10 @@
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-.pointer{
-  cursor: pointer;
-}
+
 body {
+
+  html.touch *:hover {
+    pointer-events: none !important;
+  }
+
   font-family: sans-serif;
   overflow: hidden;
   color: #fff;
@@ -27,6 +22,22 @@ body {
       text-align: left;
     }
 
+  }
+
+  .body-default{
+    //background-color: #f1f1f1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    will-change: scroll-position;
+    contain: size style layout;
+    background-color: #f3f3f3;
   }
 
   input:valid + .form-control-placeholder {
@@ -186,6 +197,21 @@ body {
 
     }
 
+    .body-default{
+      //background-color: #f1f1f1;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 1;
+      display: block;
+      overflow: hidden;
+      -webkit-overflow-scrolling: touch;
+      will-change: scroll-position;
+      contain: size style layout;
+      background-color: #f3f3f3;
+    }
     input:valid + .form-control-placeholder {
       position: absolute;
       top: -10%;

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Libraries\Template;
 
 
-class Home extends Controller
+class Profile extends Controller
 {
 
     public $helper_login;
@@ -15,7 +15,7 @@ class Home extends Controller
     {
         $this->helper_login = new Login_helper();
     }
-    public function view_home()
+    public function view_profile()
     {
         $this->helper_login->validateSession();
         $assets = [
@@ -27,7 +27,7 @@ class Home extends Controller
             ],
             'active_header' => true
         ];
-        return Template::load('home/home' ,'assets', $assets);
+        return Template::load('profile/profile' ,'assets', $assets);
     }
 
 

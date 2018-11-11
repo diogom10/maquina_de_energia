@@ -5,20 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Libraries\Template;
 use App\Libraries\Lib_login;
-
+use App\helper\Login_helper;
 
 class Login extends Controller
 {
     public $lib_login;
-
+    public $helper_login;
     public function __construct()
     {
         $this->lib_login = new Lib_login();
+        $this->helper_login = new Login_helper();
     }
 
 
     public function view_login()
     {
+        $this->helper_login->validateSession(true);
         $assets = [
             'css' => [
                 url('/') . CSS . 'login/login.css'
@@ -43,5 +45,12 @@ class Login extends Controller
     {
         $data = $dados->post();
         return $this->lib_login->login($data);
+    }
+
+    public function setLogout(Request $dados)
+    {
+        $this->lib_login->logout();
+        $response["success"] = true;
+        return $response;
     }
 }

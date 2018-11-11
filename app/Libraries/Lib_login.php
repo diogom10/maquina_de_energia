@@ -11,12 +11,14 @@ namespace App\Libraries;
 use App\Model\LoginModel;
 use App\helper\Firestore_helper;
 use Illuminate\Http\Request;
+use App\helper\Login_helper;
 
 class Lib_login
 {
     public $firestore;
     public $firebase;
     public $login_model;
+    public $helper_login;
 
     public function __construct()
     {
@@ -25,6 +27,7 @@ class Lib_login
         $this->firebase = $helper->firebase();
         $this->firestore = $helper->firestore();
         $this->login_model = new LoginModel();
+        $this->helper_login = new Login_helper();
     }
 
 
@@ -132,6 +135,7 @@ class Lib_login
         $request = new  Request();
         $session = [
             'user_id_fk' => $data->user_id,
+            'user_uid' => $data->user_uid,
             'session_ip' => $request->ip(),
             'last_activity' => date('Y-m-d H:i:s')
         ];
@@ -140,6 +144,17 @@ class Lib_login
             'timestamp'=>date('Y-m-d G:i:s')
         ], true);
         session($session);
+    }
+
+    public function logout()
+    {
+        $data = [
+            'logged' => false,
+            'timestamp'=>date('Y-m-d G:i:s')
+        ];
+        $document_id = session()->get('user_uid');
+        $this->firestore->updateDocument('users', $document_id, $data);
+        $this->helper_login->finaleSession();
     }
 
 }
