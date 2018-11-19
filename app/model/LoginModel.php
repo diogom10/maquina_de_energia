@@ -4,11 +4,15 @@ namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Database\Eloquent\SoftDeletes;
 class LoginModel extends Model
 {
+    use SoftDeletes;
+    protected $dates = ['deleted_at'];
+
     public function insertUser($dados)
     {
+
         DB::table('tb_users')->insert($dados);
     }
 

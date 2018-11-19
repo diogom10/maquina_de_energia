@@ -41,6 +41,7 @@ class Lib_login
             'user_pass' => sha1($data['user_pass']) . SEMENTE ?? null,
             'user_cpf' => $data['user_cpf'] ?? null,
             'user_estado' => $data['user_estado'] ?? null,
+            'user_picture' =>  null,
             'user_uid' => null
         ];
         $validate = $this->login_model->validUserName($user_data['user_name']);

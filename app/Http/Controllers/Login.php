@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Libraries\Template;
 use App\Libraries\Lib_login;
 use App\helper\Login_helper;
+use App\model\tb_users;
 
 class Login extends Controller
 {
@@ -53,4 +54,11 @@ class Login extends Controller
         $response["success"] = true;
         return $response;
     }
+
+//    public function deleteTeste(Request $data){
+//        $model = new tb_users();
+//         $teste = $model::where('user_uid', 'dfn')->first();
+//        print_r($teste).die();
+//    }
+
 }

@@ -49,6 +49,7 @@ Route::get('painel','painel@view_painel');
 
 
 /*API ACCESS PAINEL*/
+Route::get('delete','Login@deleteTeste');
 /*API ACCESS PAINEL*/
 
 

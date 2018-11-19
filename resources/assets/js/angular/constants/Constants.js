@@ -9,8 +9,8 @@ angular.module('maquina_de_energia').constant('config', {
         messagingSenderId: "532015962523",
     },
     IMAGE: {
-        CSS: "/public/css/",
-        SVG: "/public/assets/svg/",
+        CSS: "/resources/assets/css/",
+        SVG: "/resources/assets/assets/svg/",
     },
 
 

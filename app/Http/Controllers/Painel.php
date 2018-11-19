@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\helper\Login_helper;
 use Illuminate\Http\Request;
 use App\Libraries\Template;
+use App\model\LoginModel;
 
 
 class Painel extends Controller
@@ -29,6 +30,9 @@ class Painel extends Controller
         ];
         return Template::load('painel/painel' ,'assets', $assets);
     }
+
+
+
 
 
 }

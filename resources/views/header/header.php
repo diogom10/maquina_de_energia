@@ -30,9 +30,10 @@
 
 </head>
 <body>
-
+<div class="fade-page"></div>
 <?php if ($active_header) { ?>
 <div ng-controller="header_controller">
+
     <div class="header">
         <div class="wrapper">
             <div class="content">
